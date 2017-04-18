@@ -48,7 +48,7 @@ module.exports = class {
         app.storage = {};
 
         app.config.files.data.storage.forEach(storageName => {
-            app.storage[storageName] = flatCache.load(`${app.config.files.data.dir}${storageName}.json`, app.config.files.data.dir);
+            app.storage[storageName] = flatCache.load(`${storageName}.json`, app.config.files.data.dir);
         });
 
         /**

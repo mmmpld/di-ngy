@@ -11,7 +11,6 @@ const configDefault = require("./lib/defaults/config.default.json");
 const stringsDefault = require("./lib/defaults/strings.default.json");
 const commandsDefault = require("./lib/defaults/commands.default");
 const userEventsDefault = require("./lib/defaults/userEvents.default");
-
 const onMessage = require("./lib/events/onMessage");
 
 module.exports = class {
@@ -40,7 +39,7 @@ module.exports = class {
         /**
          * Init Internal instances
          */
-        logStream = fs.createWriteStream(app.config.files.data.dir + app.config.files.data.log + ".log");
+        logStream = fs.createWriteStream(`${app.config.files.data.dir}${app.config.files.data.log}.log`);
 
         app.log = new Log("debug", logStream);
         app.cli = new Clingy(commandsMerged);
@@ -49,7 +48,7 @@ module.exports = class {
         app.storage = {};
 
         app.config.files.data.storage.forEach(storageName => {
-            app.storage[storageName] = flatCache.load(app.config.files.data.storage + ".json", app.config.files.data.dir);
+            app.storage[storageName] = flatCache.load(`${app.config.files.data.dir}${storageName}.json`, app.config.files.data.dir);
         });
 
         /**

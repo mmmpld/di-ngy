@@ -40,13 +40,17 @@ module.exports = class {
         /**
          * Init Internal instances
          */
-        logStream = fs.createWriteStream(app.config.files.data.dir + app.config.files.data.log);
+        logStream = fs.createWriteStream(app.config.files.data.dir + app.config.files.data.log + ".log");
 
         app.log = new Log("debug", logStream);
         app.cli = new Clingy(commandsMerged);
         app.bot = new Discord.Client();
         app.data = {};
-		app.dataPersist = flatCache.load(app.config.files.data.storage, app.config.files.data.dir);
+        app.storage = {};
+
+        app.config.files.data.storage.forEach(storageName => {
+            app.storage[storageName] = flatCache.load(app.config.files.data.storage + ".json", app.config.files.data.dir);
+        });
 
         /**
          * Run events

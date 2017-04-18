@@ -45,7 +45,8 @@ module.exports = class {
         app.log = new Log("debug", logStream);
         app.cli = new Clingy(commandsMerged);
         app.bot = new Discord.Client();
-        app.data = flatCache.load(app.config.files.data.storage, app.config.files.data.dir);
+        app.data = {};
+		app.dataPersist = flatCache.load(app.config.files.data.storage, app.config.files.data.dir);
 
         /**
          * Run events

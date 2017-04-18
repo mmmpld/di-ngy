@@ -1,0 +1,32 @@
+{
+  "name": "dingy",
+  "version": "2.1.0",
+  "description": "A pretty useless discord bot",
+  "homepage": "https://f-rilling.com",
+  "author": {
+    "name": "Felix Rilling",
+    "email": "contact@f-rilling.com",
+    "url": " https://f-rilling.com"
+  },
+  "main": "index.js",
+  "keywords": [
+    "discord",
+    "bot",
+    "xd"
+  ],
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "devDependencies": {},
+  "repository": "private",
+  "license": "MIT",
+  "dependencies": {
+    "cli-ngy": "^3.1.0",
+    "discord.js": "^11.0.0",
+    "erlpack": "github:hammerandchisel/erlpack",
+    "flat-cache": "^1.2.2",
+    "lodash": "^4.17.4",
+    "log": "^1.4.0",
+    "uws": "^0.14.1"
+  }
+}

@@ -1,25 +1,8 @@
 {
-  "name": "dingy",
-  "version": "2.1.0",
-  "description": "A pretty useless discord bot",
-  "homepage": "https://f-rilling.com",
-  "author": {
-    "name": "Felix Rilling",
-    "email": "contact@f-rilling.com",
-    "url": " https://f-rilling.com"
-  },
+  "name": "di-ngy",
+  "version": "1.0.0",
+  "description": "A small discord.js + cli-ngy boilerplate",
   "main": "index.js",
-  "keywords": [
-    "discord",
-    "bot",
-    "xd"
-  ],
-  "scripts": {
-    "start": "node ./index.js"
-  },
-  "devDependencies": {},
-  "repository": "private",
-  "license": "MIT",
   "dependencies": {
     "cli-ngy": "^3.1.0",
     "discord.js": "^11.0.0",
@@ -28,5 +11,24 @@
     "lodash": "^4.17.4",
     "log": "^1.4.0",
     "uws": "^0.14.1"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FelixRilling/di-ngy.git"
+  },
+  "keywords": [
+    "bot",
+    "boilerplate",
+    "discord"
+  ],
+  "author": "FelixRilling",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FelixRilling/di-ngy/issues"
+  },
+  "homepage": "https://github.com/FelixRilling/di-ngy#readme"
 }

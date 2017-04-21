@@ -4,7 +4,7 @@
   "description": "A small discord.js + cli-ngy boilerplate",
   "main": "index.js",
   "dependencies": {
-    "cli-ngy": "^3.1.0",
+    "cli-ngy": "^4.0.0",
     "discord.js": "^11.0.0",
     "erlpack": "github:hammerandchisel/erlpack",
     "flat-cache": "^1.2.2",

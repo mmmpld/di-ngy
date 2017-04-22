@@ -4,7 +4,7 @@
     "errorPermission": "You don't have permissions to access this command",
     "errorInternal": "Internal error",
     "errorUnknownCommand": "Unkown command",
-    "infoSimilar":"Did you mean",
+    "infoSimilar": "Did you mean",
     "errorMissingArgument": "Missing argument",
     "errorTooLong": "The output was to long to print",
     "infoInternal": "Internal error"

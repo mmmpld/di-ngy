@@ -1,5 +1,10 @@
-node_modules
-config.json
-data/
-bot.log
-test.js
+# System Files
+.DS_Store
+
+# Vendor Files
+node_modules/
+bower_components/
+
+# Debug Files
+.tmp/
+npm-debug.*

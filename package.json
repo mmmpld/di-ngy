@@ -24,11 +24,9 @@
     "dependencies": {
         "cli-ngy": "^4.4.0",
         "discord.js": "^11.0.0",
-        "erlpack": "github:hammerandchisel/erlpack",
         "flat-cache": "^1.2.2",
         "lodash": "^4.17.4",
         "log": "^1.4.0",
-        "uws": "^0.14.3"
     },
     "devDependencies": {}
 }

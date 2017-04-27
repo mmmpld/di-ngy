@@ -4,8 +4,8 @@ const Dingy = require("./index");
 
 const bot = new Dingy({
     "name": "lisa-beta",
-    "prefix": "beta ",
-    "token": "MzA2NDAzMzA0NjMwNTE3Nzcy.C-DP2A.idcIZSesj6CRvlSP_8w_fgpHFlA",
+    "prefix": "$b ",
+    "token": "MzA2NDAzMzA0NjMwNTE3Nzcy.C-NHUw.hYG-YicfjloBehA8xEoE2G4olYs",
     "adminIds": [
         "128985967875850240"
     ],

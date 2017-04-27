@@ -1,6 +1,6 @@
 {
     "name": "di-ngy",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "description": "A small discord.js + cli-ngy boilerplate",
     "main": "index.js",
     "scripts": {
@@ -28,7 +28,7 @@
         "flat-cache": "^1.2.2",
         "lodash": "^4.17.4",
         "log": "^1.4.0",
-        "uws": "^0.14.1"
+        "uws": "^0.14.3"
     },
     "devDependencies": {}
 }

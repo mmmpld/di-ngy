@@ -46,6 +46,10 @@ const bot = new Dingy({
             }
         }
     }
-}, {}, {});
+}, {}, {
+    onInit: () => console.log("INIT"),
+    onConnect: () => console.log("CONNECT"),
+    onMessage: () => console.log("MESSAGE")
+});
 
 bot.connect();

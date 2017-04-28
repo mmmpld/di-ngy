@@ -14,3 +14,4 @@ config.json
 data/*.json
 data/*.log
 test.js
+data/

@@ -13,7 +13,19 @@ const commandsDefault = require("./lib/defaults/commands.default");
 const userEventsDefault = require("./lib/defaults/userEvents.default");
 const onMessage = require("./lib/events/onMessage");
 
+/**
+ * Di-ngy class
+ * @class
+ */
 module.exports = class {
+    /**
+     * Creates Di-ngy instance
+     * @constructor
+     * @param {Object} config
+     * @param {Object} commands
+     * @param {Object} strings
+     * @param {Object} userEvents
+     */
     constructor(config, commands = {}, strings = {}, userEvents = {}) {
         const app = this;
         let logStream;
@@ -76,6 +88,9 @@ module.exports = class {
         app.userEvents.onInit(app);
         console.log("Init:Finished Start");
     }
+    /**
+     * Connects the bot to Discord
+     */
     connect() {
         const app = this;
 
@@ -91,6 +106,7 @@ module.exports = class {
             })
             .catch(err => {
                 console.log("Connect:Connection Failure");
+
                 throw new Error("An error occured connecting to the discord API", err);
             });
 

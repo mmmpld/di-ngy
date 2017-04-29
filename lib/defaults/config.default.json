@@ -17,6 +17,9 @@
         "assets": "./data/assets/"
     },
     "options": {
-        "enableDefaultCommands": true
+        "enableDefaultCommands": true,
+        "answerToMissingCommand":false,
+        "answerToMissingArgs":false,
+        "answerToMissingPerms":false
     }
 }

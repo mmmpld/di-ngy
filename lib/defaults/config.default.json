@@ -18,8 +18,8 @@
     },
     "options": {
         "enableDefaultCommands": true,
-        "answerToMissingCommand":false,
-        "answerToMissingArgs":false,
-        "answerToMissingPerms":false
+        "answerToMissingCommand": false,
+        "answerToMissingArgs": false,
+        "answerToMissingPerms": false
     }
 }

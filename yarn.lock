@@ -43,11 +43,12 @@ circular-json@^0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/circular-json/-/circular-json-0.3.1.tgz#be8b36aefccde8b3ca7aa2d6afc07a37242c0d2d"
 
-cli-ngy@^4.4.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/cli-ngy/-/cli-ngy-4.4.0.tgz#b4217dc6188ca9ccb25883d8a5c861586de1986d"
+cli-ngy@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/cli-ngy/-/cli-ngy-4.5.0.tgz#7dbf48f93ac9fe7fd41ac6477cd2db261c918c40"
   dependencies:
-    similar-strings "^1.6.0"
+    lodash "^4.17.4"
+    similar-strings "^1.6.1"
 
 combined-stream@^1.0.5:
   version "1.0.5"
@@ -305,7 +306,7 @@ rimraf@^2.2.8:
   dependencies:
     glob "^7.0.5"
 
-similar-strings@^1.6.0:
+similar-strings@^1.6.1:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/similar-strings/-/similar-strings-1.6.1.tgz#c040ba123ce20ed1c0a07c969e5b5178d65a5ee5"
   dependencies:

@@ -31,7 +31,7 @@ module.exports = class {
         let logStream;
         let commandsMerged;
 
-        console.log("Init:Starting");
+        console.log("Init started");
 
         if (!config.token) {
             throw new Error("No token provided!");
@@ -50,22 +50,21 @@ module.exports = class {
             commandsMerged = commands;
         }
 
-        console.log("Init:Loaded Config");
-
         /**
          * Init Internal instances
          */
         logStream = fs.createWriteStream(`${app.config.files.data.dir}${app.config.files.data.log}.log`);
-        console.log("Init:Loaded Log Stream");
-
         app.log = new Log("debug", logStream);
-        console.log("Init:Created Log");
+        app.log.info("Init:Loaded Log Stream");
 
-        app.cli = new Clingy(commandsMerged);
-        console.log("Init:Created Clingy");
+        app.cli = new Clingy(commandsMerged, {
+            caseSensitive: app.config.options.commandsAreCaseSensitive,
+            suggestSimilar: app.config.options.answerToMissingCommand,
+        });
+        app.log.info("Init:Created Clingy");
 
         app.bot = new Discord.Client();
-        console.log("Init:Created Discord Client");
+        app.log.info("Init:Created Discord Client");
 
         app.data = {};
         app.storage = {};
@@ -73,7 +72,7 @@ module.exports = class {
         app.config.files.data.storage.forEach(storageName => {
             app.storage[storageName] = flatCache.load(`${storageName}.json`, app.config.files.data.dir);
         });
-        console.log("Init:Loaded Cache");
+        app.log.info("Init:Loaded Cache");
 
         /**
          * Run events
@@ -82,11 +81,12 @@ module.exports = class {
             app.userEvents.onMessage(msg, app);
             onMessage(msg, app);
         });
-        console.log("Init:Bound Message Event");
+        app.log.info("Init:Bound Message Event");
 
         //User event
+        console.log("Init finished");
+        app.log.info("Init:Finished Start");
         app.userEvents.onInit(app);
-        console.log("Init:Finished Start");
     }
     /**
      * Connects the bot to Discord
@@ -94,22 +94,24 @@ module.exports = class {
     connect() {
         const app = this;
 
-        console.log("Connect:Starting");
+        console.log("Connection started");
+        app.log.info("Connect:Starting");
 
         app.bot
             .login(app.config.token)
             .then(() => {
-                console.log("Connect:Connected");
-
+                console.log("Connection established");
+                app.log.info("Connect:Connected");
                 app.bot.user.setGame(app.strings.currentlyPlaying);
                 app.userEvents.onConnect(app);
             })
             .catch(err => {
-                console.log("Connect:Connection Failure");
+                console.log("Connection failure");
+                app.log.info("Connect:Connection Failure");
 
                 throw new Error("An error occured connecting to the discord API", err);
             });
 
-        console.log("Connect:Attempt Login");
+        app.log.info("Connect:Attempt Login");
     }
 };

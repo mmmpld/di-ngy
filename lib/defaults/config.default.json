@@ -18,6 +18,7 @@
     },
     "options": {
         "enableDefaultCommands": true,
+        "commandsAreCaseSensitive": true,
         "answerToMissingCommand": false,
         "answerToMissingArgs": false,
         "answerToMissingPerms": false

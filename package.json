@@ -28,5 +28,9 @@
         "lodash": "^4.17.4",
         "log": "^1.4.0"
     },
-    "devDependencies": {}
+    "devDependencies": {},
+    "engines": {
+        "node": "7.9.x",
+        "npm": "4.6.x"
+    }
 }

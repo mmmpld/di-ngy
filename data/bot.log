@@ -1,12 +1,19 @@
-[Fri May 05 2017 12:20:35 GMT+0200 (DST)] INFO Init:Loaded Log Stream
-[Fri May 05 2017 12:20:35 GMT+0200 (DST)] INFO Init:Created Clingy
-[Fri May 05 2017 12:20:35 GMT+0200 (DST)] INFO Init:Created Discord Client
-[Fri May 05 2017 12:20:35 GMT+0200 (DST)] INFO Init:Loaded Cache
-[Fri May 05 2017 12:20:35 GMT+0200 (DST)] INFO Init:Bound Message Event
-[Fri May 05 2017 12:20:35 GMT+0200 (DST)] INFO Init:Finished Start
-[Fri May 05 2017 12:20:35 GMT+0200 (DST)] INFO Connect:Starting
-[Fri May 05 2017 12:20:35 GMT+0200 (DST)] INFO Connect:Attempt Login
-[Fri May 05 2017 12:20:37 GMT+0200 (DST)] INFO Connect:Connected
-[Fri May 05 2017 12:20:41 GMT+0200 (DST)] INFO Resolving %foo
-[Fri May 05 2017 12:20:41 GMT+0200 (DST)] INFO TooLong foofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoofoo
-[Fri May 05 2017 12:20:41 GMT+0200 (DST)] INFO SentFile
+[Fri May 05 2017 14:21:10 GMT+0200 (DST)] INFO Init:Loaded Log Stream
+[Fri May 05 2017 14:21:10 GMT+0200 (DST)] INFO Init:Created Clingy
+[Fri May 05 2017 14:21:10 GMT+0200 (DST)] INFO Init:Created Discord Client
+[Fri May 05 2017 14:21:10 GMT+0200 (DST)] INFO Init:Loaded Cache
+[Fri May 05 2017 14:21:10 GMT+0200 (DST)] INFO Init:Bound Message Event
+[Fri May 05 2017 14:21:10 GMT+0200 (DST)] INFO Init:Finished Start
+[Fri May 05 2017 14:21:11 GMT+0200 (DST)] INFO Connect:Starting
+[Fri May 05 2017 14:21:11 GMT+0200 (DST)] INFO Connect:Attempt Login
+[Fri May 05 2017 14:21:12 GMT+0200 (DST)] INFO Connect:Connected
+[Fri May 05 2017 14:21:15 GMT+0200 (DST)] INFO Resolving %help
+[Fri May 05 2017 14:21:15 GMT+0200 (DST)] INFO SentMsg
+[Fri May 05 2017 14:21:19 GMT+0200 (DST)] INFO Resolving %foo
+[Fri May 05 2017 14:21:19 GMT+0200 (DST)] INFO TooLong true
+[Fri May 05 2017 14:21:20 GMT+0200 (DST)] INFO SentMsg
+[Fri May 05 2017 14:21:26 GMT+0200 (DST)] INFO Resolving %help
+[Fri May 05 2017 14:21:26 GMT+0200 (DST)] INFO SentMsg
+[Fri May 05 2017 14:21:30 GMT+0200 (DST)] INFO Ignoring %abouz
+[Fri May 05 2017 14:21:33 GMT+0200 (DST)] INFO Resolving %about
+[Fri May 05 2017 14:21:34 GMT+0200 (DST)] INFO SentMsg

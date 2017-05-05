@@ -34,7 +34,6 @@ const commands = {
         alias: [],
         args: [],
         admin: false,
-        outputType: "text",
         help: {
             short: "Shows help",
             long: "Shows help for one or all commands"

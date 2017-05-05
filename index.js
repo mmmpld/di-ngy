@@ -7,10 +7,11 @@ const Discord = require("discord.js");
 const merge = require("lodash/merge");
 const flatCache = require("flat-cache");
 
-const configDefault = require("./lib/defaults/config.default.json");
-const stringsDefault = require("./lib/defaults/strings.default.json");
+const configDefault = require("./lib/defaults/config.default");
+const stringsDefault = require("./lib/defaults/strings.default");
 const commandsDefault = require("./lib/defaults/commands.default");
 const userEventsDefault = require("./lib/defaults/userEvents.default");
+
 const onMessage = require("./lib/events/onMessage");
 
 /**
@@ -30,8 +31,6 @@ module.exports = class {
         const app = this;
         let logStream;
         let commandsMerged;
-
-        console.log("Init started");
 
         if (!config.token) {
             throw new Error("No token provided!");
@@ -84,7 +83,6 @@ module.exports = class {
         app.log.info("Init:Bound Message Event");
 
         //User event
-        console.log("Init finished");
         app.log.info("Init:Finished Start");
         app.userEvents.onInit(app);
     }
@@ -94,7 +92,6 @@ module.exports = class {
     connect() {
         const app = this;
 
-        console.log("Connection started");
         app.log.info("Connect:Starting");
 
         app.bot

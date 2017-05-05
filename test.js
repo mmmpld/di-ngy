@@ -28,7 +28,21 @@ const config = {
     }
 };
 
-const bot = new Dingy(config, {}, {}, {});
+const commands = {
+    foo: {
+        fn: () => "foo".repeat(1000),
+        alias: [],
+        args: [],
+        admin: false,
+        outputType: "text",
+        help: {
+            short: "Shows help",
+            long: "Shows help for one or all commands"
+        }
+    },
+};
+
+const bot = new Dingy(config, commands, {}, {});
 
 //Spoof server for heroku
 http.createServer(() => "Bot running").listen(process.env.PORT || 6000);

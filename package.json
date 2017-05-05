@@ -1,40 +1,41 @@
 {
-    "name": "di-ngy",
-    "version": "2.0.0",
-    "description": "A small discord.js + cli-ngy boilerplate",
-    "main": "index.js",
-    "scripts": {
-        "test": "node index.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/FelixRilling/di-ngy.git"
-    },
-    "keywords": [
-        "bot",
-        "boilerplate",
-        "discord"
-    ],
-    "author": "FelixRilling",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/FelixRilling/di-ngy/issues"
-    },
-    "homepage": "https://github.com/FelixRilling/di-ngy#readme",
-    "dependencies": {
-        "cli-ngy": "^4.5.1",
-        "discord.js": "^11.1.0",
-        "flat-cache": "^1.2.2",
-        "lodash": "^4.17.4",
-        "log": "^1.4.0"
-    },
-    "devDependencies": {},
-    "optionalDependencies": {
-        "erlpack": "github:hammerandchisel/erlpack",
-        "uws": "^0.14.5"
-    },
-    "engines": {
-        "node": "^7.x",
-        "npm": "^4.x"
-    }
+  "name": "di-ngy",
+  "version": "2.1.0",
+  "description": "A small discord.js + cli-ngy boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FelixRilling/di-ngy.git"
+  },
+  "keywords": [
+    "bot",
+    "boilerplate",
+    "discord"
+  ],
+  "author": "FelixRilling",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FelixRilling/di-ngy/issues"
+  },
+  "homepage": "https://github.com/FelixRilling/di-ngy#readme",
+  "dependencies": {
+    "cli-ngy": "^4.5.1",
+    "discord.js": "^11.1.0",
+    "flat-cache": "^1.2.2",
+    "lodash": "^4.17.4",
+    "log": "^1.4.0",
+    "node-fetch": "^1.6.3"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {
+    "erlpack": "github:hammerandchisel/erlpack",
+    "uws": "^0.14.5"
+  },
+  "engines": {
+    "node": "^7.x",
+    "npm": "^4.x"
+  }
 }

@@ -1,13 +1,13 @@
-[Fri May 05 2017 21:54:24 GMT+0200 (DST)] INFO Init:Loaded Log Stream
-[Fri May 05 2017 21:54:24 GMT+0200 (DST)] INFO Init:Created Clingy
-[Fri May 05 2017 21:54:24 GMT+0200 (DST)] INFO Init:Created Discord Client
-[Fri May 05 2017 21:54:24 GMT+0200 (DST)] INFO Init:Loaded Cache
-[Fri May 05 2017 21:54:24 GMT+0200 (DST)] INFO Init:Bound Message Event
-[Fri May 05 2017 21:54:24 GMT+0200 (DST)] INFO Init:Finished Start
-[Fri May 05 2017 21:54:24 GMT+0200 (DST)] INFO Connect:Starting
-[Fri May 05 2017 21:54:24 GMT+0200 (DST)] INFO Connect:Attempt Login
-[Fri May 05 2017 21:54:26 GMT+0200 (DST)] INFO Connect:Connected
-[Fri May 05 2017 21:54:29 GMT+0200 (DST)] INFO Resolving %help
-[Fri May 05 2017 21:54:30 GMT+0200 (DST)] INFO SentMsg
-[Fri May 05 2017 21:54:38 GMT+0200 (DST)] INFO Resolving %help about
-[Fri May 05 2017 21:54:39 GMT+0200 (DST)] INFO SentMsg
+[Fri May 05 2017 22:20:26 GMT+0200 (DST)] INFO Init:Loaded Log Stream
+[Fri May 05 2017 22:20:26 GMT+0200 (DST)] INFO Init:Created Clingy
+[Fri May 05 2017 22:20:26 GMT+0200 (DST)] INFO Init:Created Discord Client
+[Fri May 05 2017 22:20:26 GMT+0200 (DST)] INFO Init:Loaded Cache
+[Fri May 05 2017 22:20:26 GMT+0200 (DST)] INFO Init:Bound Message Event
+[Fri May 05 2017 22:20:26 GMT+0200 (DST)] INFO Init:Finished Start
+[Fri May 05 2017 22:20:26 GMT+0200 (DST)] INFO Connect:Starting
+[Fri May 05 2017 22:20:26 GMT+0200 (DST)] INFO Connect:Attempt Login
+[Fri May 05 2017 22:20:27 GMT+0200 (DST)] INFO Connect:Connected
+[Fri May 05 2017 22:21:07 GMT+0200 (DST)] INFO Resolving %about
+[Fri May 05 2017 22:21:08 GMT+0200 (DST)] INFO SentMsg
+[Fri May 05 2017 22:21:20 GMT+0200 (DST)] INFO Resolving %about
+[Fri May 05 2017 22:21:21 GMT+0200 (DST)] INFO SentMsg

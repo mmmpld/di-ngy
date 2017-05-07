@@ -29,7 +29,6 @@ module.exports = class {
      */
     constructor(config, commands = {}, strings = {}, userEvents = {}) {
         const app = this;
-        let logStream;
         let commandsMerged;
 
         if (!config.token) {
@@ -39,9 +38,14 @@ module.exports = class {
             throw new Error("No admin-IDs provided!");
         }
 
+        app.log = new Log("debug");
+        app.log.info("Init", "Loaded Log");
+
         app.config = merge(configDefault, config);
         app.strings = merge(stringsDefault, strings);
         app.userEvents = merge(userEventsDefault, userEvents);
+
+        app.log.info("Init", "Loaded Config");
 
         if (app.config.options.enableDefaultCommands) {
             commandsMerged = merge(commandsDefault, commands);
@@ -49,41 +53,40 @@ module.exports = class {
             commandsMerged = commands;
         }
 
+        app.log.info("Init", "Loaded Commands");
+
         /**
          * Init Internal instances
          */
-        logStream = fs.createWriteStream(`${app.config.files.data.dir}${app.config.files.data.log}.log`);
-        app.log = new Log("debug", logStream);
-        app.log.info("Init:Loaded Log Stream");
-
         app.cli = new Clingy(commandsMerged, {
             caseSensitive: app.config.options.commandsAreCaseSensitive,
             suggestSimilar: app.config.options.answerToMissingCommand,
         });
-        app.log.info("Init:Created Clingy");
+        app.log.info("Init", "Created Clingy");
 
         app.bot = new Discord.Client();
-        app.log.info("Init:Created Discord Client");
+        app.log.info("Init", "Created Discord Client");
 
+        /**
+         * data: runtime data
+         * storage: persisted data
+         */
         app.data = {};
         app.storage = {};
 
         app.config.files.data.storage.forEach(storageName => {
             app.storage[storageName] = flatCache.load(`${storageName}.json`, app.config.files.data.dir);
         });
-        app.log.info("Init:Loaded Cache");
+        app.log.info("Init", "Loaded Cache");
 
-        /**
-         * Run events
-         */
+        //Bind message event
         app.bot.on("message", msg => {
-            app.userEvents.onMessage(msg, app);
             onMessage(msg, app);
+            app.userEvents.onMessage(msg, app);
         });
-        app.log.info("Init:Bound Message Event");
 
         //User event
-        app.log.info("Init:Finished Start");
+        app.log.info("Init", "Finished Start");
         app.userEvents.onInit(app);
     }
     /**
@@ -92,23 +95,21 @@ module.exports = class {
     connect() {
         const app = this;
 
-        app.log.info("Connect:Starting");
+        app.log.info("Connect", "Starting");
 
         app.bot
             .login(app.config.token)
             .then(() => {
-                console.log("Connection established");
-                app.log.info("Connect:Connected");
+                app.log.notice("Connect", "Connected");
                 app.bot.user.setGame(app.strings.currentlyPlaying);
                 app.userEvents.onConnect(app);
             })
             .catch(err => {
-                console.log("Connection failure");
-                app.log.info("Connect:Connection Failure");
+                app.log.error("Connect", "Connection Failure");
 
                 throw new Error("An error occured connecting to the discord API", err);
             });
 
-        app.log.info("Connect:Attempt Login");
+        app.log.info("Connect", "Attempt Login");
     }
 };

@@ -1,6 +1,6 @@
 {
   "name": "di-ngy",
-  "version": "2.5.0",
+  "version": "2.6.0",
   "description": "A small discord.js + cli-ngy boilerplate",
   "main": "index.js",
   "scripts": {
@@ -30,10 +30,7 @@
     "node-fetch": "^1.6.3"
   },
   "devDependencies": {},
-  "optionalDependencies": {
-    "erlpack": "github:hammerandchisel/erlpack",
-    "uws": "^0.14.5"
-  },
+  "optionalDependencies": {},
   "engines": {
     "node": "^7.x",
     "npm": "^4.x"

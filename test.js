@@ -30,11 +30,13 @@ const config = {
 
 const commands = {
     foo: {
-        fn: () => "foo".repeat(1000),
+        fn: () => new Promise((resolve, reject) => setTimeout(() => {
+            resolve("foo");
+        }, 2000)),
         alias: [],
         args: [],
         admin: false,
-        hidden:true,
+        hidden: true,
         help: {
             short: "Shows help",
             long: "Shows help for one or all commands"

@@ -1,9 +1,9 @@
 "use strict";
 
+const merge = require("lodash/merge");
 const Log = require("log");
 const Clingy = require("cli-ngy");
 const Discord = require("discord.js");
-const merge = require("lodash/merge");
 const flatCache = require("flat-cache");
 
 const configDefault = require("./lib/defaults/config.default");
@@ -102,7 +102,7 @@ module.exports = class {
             .catch(err => {
                 app.log.error("Connect", "Failure");
 
-                throw new Error("An error occured connecting to the discord API", err);
+                throw new Error("An error occured connecting to the Discord-API", err);
             });
 
         app.log.info("Connect", "Attempt Login");

@@ -20,6 +20,18 @@ const onMessage = require("./lib/events/onMessage");
 module.exports = class {
     /**
      * Creates Di-ngy instance
+     * {
+     *   bot,           //Discord.js instance
+     *   cli,           //Cli-ngy command parser
+     *   log,           //Logger
+     *
+     *   strings,       //String object
+     *   config,        //Config object
+     *   userEvents     //Even object
+     *
+     *   data,          //Runtime Data
+     *   dataPersisted  //Persisted Data (As JSON)
+     * }
      * @constructor
      * @param {Object} config
      * @param {Object} commands
@@ -47,12 +59,11 @@ module.exports = class {
             commandsMerged = commands;
         }
 
+
+
         app.log = new Log(app.config.options.logLevel);
         app.log.debug("Init", "Loaded Config");
 
-        /**
-         * Init Internal instances
-         */
         app.cli = new Clingy(commandsMerged, {
             caseSensitive: app.config.options.commandsAreCaseSensitive,
             suggestSimilar: app.config.options.answerToMissingCommand,
@@ -62,30 +73,26 @@ module.exports = class {
         app.bot = new Discord.Client();
         app.log.debug("Init", "Created Discord Client");
 
-        /**
-         * data: runtime data
-         * storage: persisted data
-         */
         app.data = {};
-        app.storage = {};
+        app.dataPersisted = {};
 
-        app.config.files.data.storage.forEach(storageName => {
-            app.storage[storageName] = flatCache.load(`${storageName}.json`, app.config.files.data.dir);
+        app.config.dataPersisted.files.forEach(fileName => {
+            app.dataPersisted[fileName] = flatCache.load(`${fileName}.json`, app.config.dataPersisted.dir);
         });
-        app.log.debug("Init", "Loaded Cache");
+        app.log.debug("Init", "Loaded Data");
 
-        //Bind message event
+
+
         app.bot.on("message", msg => {
             onMessage(msg, app);
             app.userEvents.onMessage(msg, app);
         });
 
-        //User event
         app.log.info("Init", "Success");
         app.userEvents.onInit(app);
     }
     /**
-     * Connects the bot to Discord
+     * Connect to the Discord API
      */
     connect() {
         const app = this;
@@ -95,7 +102,7 @@ module.exports = class {
         app.bot
             .login(app.config.token)
             .then(() => {
-                app.log.notice("Connect", "Success");
+                app.log.info("Connect", "Success");
                 app.bot.user.setGame(app.strings.currentlyPlaying);
                 app.userEvents.onConnect(app);
             })
@@ -104,7 +111,5 @@ module.exports = class {
 
                 throw new Error("An error occured connecting to the Discord-API", err);
             });
-
-        app.log.info("Connect", "Attempt Login");
     }
 };

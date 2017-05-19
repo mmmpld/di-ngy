@@ -7,8 +7,20 @@ const config = {
     prefix: "$$",
     token: process.env.DISCORD_KEY_TEST,
     adminIds: [
-        "128985967875850240"
-    ]
+        "128985967875850d240"
+    ],
+    options: {
+        enableDefaultCommands: true,
+        commandsAreCaseSensitive: true,
+
+        answerToMissingCommand: true,
+        answerToMissingArgs: true,
+        answerToMissingPerms: true,
+
+        sendFilesForLongReply: true,
+
+        logLevel: "debug"
+    }
 };
 
 const commands = {
@@ -23,7 +35,7 @@ const commands = {
         sub: {
             async: {
                 fn: () => new Promise(resolve => setTimeout(() => {
-                    resolve("foo");
+                    resolve("success");
                 }, 2000)),
                 alias: [],
                 args: [],
@@ -39,6 +51,29 @@ const commands = {
                 help: {
                     short: "Test long",
                     long: "Test long"
+                }
+            },
+            admin: {
+                fn: () => "success",
+                alias: [],
+                args: [],
+                admin: true,
+                help: {
+                    short: "Test admin",
+                    long: "Test admin"
+                }
+            },
+            args: {
+                fn: () => "success",
+                alias: [],
+                args: [{
+                    name: "foo",
+                    type: "string",
+                    required: true
+                }],
+                help: {
+                    short: "Test args",
+                    long: "Test args"
                 }
             },
         }

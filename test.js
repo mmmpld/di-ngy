@@ -7,7 +7,7 @@ const config = {
     prefix: "$$",
     token: process.env.DISCORD_KEY_TEST,
     adminIds: [
-        "128985967875850d240"
+        "128985967875850240"
     ],
     options: {
         enableDefaultCommands: true,

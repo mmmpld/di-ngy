@@ -1,10 +1,10 @@
 {
   "name": "di-ngy",
-  "version": "3.2.0",
+  "version": "3.3.0",
   "description": "A small discord.js + cli-ngy boilerplate",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",

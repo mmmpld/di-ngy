@@ -3,7 +3,7 @@
 const Dingy = require("./index");
 
 const config = {
-    name: "lisa-bot-beta",
+    name: "lisa-beta",
     prefix: "$$",
     token: process.env.DISCORD_KEY_TEST,
     adminIds: [

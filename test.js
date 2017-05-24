@@ -68,7 +68,6 @@ const commands = {
                 alias: [],
                 args: [{
                     name: "foo",
-                    type: "string",
                     required: true
                 }],
                 help: {

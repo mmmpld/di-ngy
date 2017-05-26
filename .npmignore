@@ -12,3 +12,4 @@ npm-debug.*
 test/
 spec/
 test*.js
+data/

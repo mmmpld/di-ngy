@@ -33,6 +33,15 @@ const commands = {
             long: "Test main"
         },
         sub: {
+            weirdtype: {
+                fn: () => true,
+                alias: [],
+                args: [],
+                help: {
+                    short: "Test weirdtype",
+                    long: "Test weirdtype"
+                }
+            },
             async: {
                 fn: () => new Promise(resolve => setTimeout(() => {
                     resolve("success");

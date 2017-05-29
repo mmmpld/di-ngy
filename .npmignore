@@ -45,3 +45,6 @@ test*.js
 .gitignore
 .editorconfig
 .eslintrc.json
+
+# Data Files
+data/

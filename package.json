@@ -5,8 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "npm-run-all lint test",
-        "lint": "eslint index.js lib/",
-        "test": "node test.js"
+        "lint": "eslint index.js lib/"
     },
     "repository": {
         "type": "git",

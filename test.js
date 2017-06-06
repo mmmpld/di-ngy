@@ -10,15 +10,6 @@ const config = {
         "128985967875850240"
     ],
     options: {
-        enableDefaultCommands: true,
-        commandsAreCaseSensitive: true,
-
-        answerToMissingCommand: true,
-        answerToMissingArgs: true,
-        answerToMissingPerms: true,
-
-        sendFilesForLongReply: true,
-
         logLevel: "debug"
     }
 };

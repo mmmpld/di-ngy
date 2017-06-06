@@ -40,7 +40,6 @@ module.exports = class {
      */
     constructor(config, commands = {}, strings = {}, userEvents = {}) {
         const app = this;
-        let commandsMerged;
 
         if (!config.token) {
             throw new Error("No token provided!");
@@ -49,25 +48,24 @@ module.exports = class {
             throw new Error("No admin-IDs provided!");
         }
 
-        app.config = merge(configDefault, config);
-        app.strings = merge(stringsDefault, strings);
-        app.userEvents = merge(userEventsDefault, userEvents);
-
-        if (app.config.options.enableDefaultCommands) {
-            commandsMerged = merge(commandsDefault, commands);
-        } else {
-            commandsMerged = commands;
-        }
-
-
+        app.config = merge(configDefault(), config);
+        app.strings = merge(stringsDefault(), strings);
+        app.userEvents = merge(userEventsDefault(), userEvents);
 
         app.log = new Log(app.config.options.logLevel);
         app.log.debug("Init", "Loaded Config");
 
-        app.cli = new Clingy(commandsMerged, {
-            caseSensitive: app.config.options.commandsAreCaseSensitive,
-            suggestSimilar: app.config.options.answerToMissingCommand,
-        });
+        app.cli = new Clingy(
+            app.config.options.enableDefaultCommands ? merge(commandsDefault(), commands) : commands, {
+                lookup: {
+                    namesAreCaseSensitive: app.config.options.namesAreCaseSensitive
+                },
+                parser: {
+                    allowQuotedStrings: app.config.options.allowQuotedStrings,
+                    validQuotes: app.config.options.validQuotes,
+                }
+            }
+        );
         app.log.debug("Init", "Created Clingy");
 
         app.bot = new Discord.Client();
@@ -80,8 +78,6 @@ module.exports = class {
             app.dataPersisted[fileName] = flatCache.load(`${fileName}.json`, app.config.dataPersisted.dir);
         });
         app.log.debug("Init", "Loaded Data");
-
-
 
         app.bot.on("message", msg => {
             onMessage(msg, app);

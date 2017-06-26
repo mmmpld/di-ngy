@@ -5,7 +5,7 @@ const Dingy = require("./index");
 const config = {
     name: "lisa-beta",
     prefix: "$$",
-    token: process.env.DISCORD_KEY_TEST,
+    token: process.env.DISCORD_KEY,
     adminIds: [
         "128985967875850240"
     ],

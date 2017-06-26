@@ -23,7 +23,7 @@
     },
     "homepage": "https://github.com/FelixRilling/di-ngy#readme",
     "dependencies": {
-        "cli-ngy": "^6.0.0",
+        "cli-ngy": "^6.0.1",
         "discord.js": "^11.1.0",
         "flat-cache": "^1.2.2",
         "lodash": "^4.17.4",
@@ -31,7 +31,7 @@
         "node-fetch": "^1.7.1"
     },
     "devDependencies": {
-        "eslint": "^3.19.0"
+        "eslint": "^4.1.1"
     },
     "optionalDependencies": {},
     "engines": {

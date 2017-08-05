@@ -1,10 +1,12 @@
 "use strict";
 
-const merge = require("lodash/merge");
+const RECONNECT_TIMEOUT = 10000;
+
 const Log = require("log");
 const Clingy = require("cli-ngy");
 const Discord = require("discord.js");
 const flatCache = require("flat-cache");
+const merge = require("lodash/merge");
 
 const configDefault = require("./lib/defaults/config.default");
 const stringsDefault = require("./lib/defaults/strings.default");
@@ -48,6 +50,9 @@ module.exports = class {
             throw new Error("No admin-IDs provided!");
         }
 
+        /**
+         * Stores instance config
+         */
         app.config = merge(configDefault(), config);
         app.strings = merge(stringsDefault(), strings);
         app.userEvents = merge(userEventsDefault(), userEvents);
@@ -68,6 +73,9 @@ module.exports = class {
         );
         app.log.debug("Init", "Created Clingy");
 
+        /**
+         * Bootstraps Client
+         */
         app.bot = new Discord.Client();
         app.log.debug("Init", "Created Discord Client");
 
@@ -79,9 +87,18 @@ module.exports = class {
         });
         app.log.debug("Init", "Loaded Data");
 
+        /**
+         * Binds events
+         */
         app.bot.on("message", msg => {
             onMessage(msg, app);
             app.userEvents.onMessage(msg, app);
+        });
+        app.bot.on("disconnect", err => {
+            app.log.error("Disconnect", err);
+            app.bot.setTimeout(() => {
+                app.connect();
+            }, RECONNECT_TIMEOUT);
         });
 
         app.log.info("Init", "Success");

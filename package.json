@@ -24,7 +24,7 @@
     "homepage": "https://github.com/FelixRilling/di-ngy#readme",
     "dependencies": {
         "cli-ngy": "^6.1.1",
-        "discord.js": "github:hydrabolt/discord.js#11.1-dev",
+        "discord.js": "^11.1.0",
         "flat-cache": "^1.2.2",
         "lodash": "^4.17.4",
         "log": "^1.4.0",

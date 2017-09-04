@@ -28,7 +28,8 @@
         "redis": "^2.8.0",
         "lodash": "^4.17.4",
         "log": "^1.4.0",
-        "node-fetch": "^1.7.2"
+        "node-fetch": "^1.7.2",
+        "circular-json": "^0.3.3"
     },
     "devDependencies": {
         "eslint": "^4.5.0",

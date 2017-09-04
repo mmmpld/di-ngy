@@ -7,7 +7,7 @@ const config = {
     prefix: "$$",
     token: process.env.DISCORD_KEY,
     adminIds: [
-        "128985967875850240"
+        "222957769131687936"
     ],
     options: {
         logLevel: "debug"
@@ -73,6 +73,18 @@ const commands = {
                 help: {
                     short: "Test args",
                     long: "Test args"
+                }
+            },
+            save: {
+                fn: (args) => bot.redisClient.set("save test", args.data),
+                alias: [],
+                args: [{
+                    name: "data",
+                    required: true
+                }],
+                help: {
+                    short: "Save value",
+                    long: "Save value"
                 }
             },
         }

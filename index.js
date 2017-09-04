@@ -5,7 +5,7 @@ const RECONNECT_TIMEOUT = 10000;
 const Log = require("log");
 const Clingy = require("cli-ngy");
 const Discord = require("discord.js");
-const flatCache = require("flat-cache");
+const redisCache = require("./lib/util/redis-cache.js");
 const merge = require("lodash/merge");
 
 const configDefault = require("./lib/defaults/config.default");
@@ -83,9 +83,9 @@ module.exports = class {
         app.dataPersisted = {};
 
         app.config.dataPersisted.files.forEach(fileName => {
-            app.dataPersisted[fileName] = flatCache.load(`${fileName}.json`, app.config.dataPersisted.dir);
+            app.dataPersisted[fileName] = redisCache.load(`${fileName}.json`, app.config.dataPersisted.dir);
         });
-        app.log.debug("Init", "Loaded Data");
+        app.log.debug("Init", "Loaded Data From Redis");
 
         /**
          * Binds events
